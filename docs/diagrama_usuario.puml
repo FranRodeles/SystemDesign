@@ -9,5 +9,12 @@ class Role{
     - String description
 }
 
+class UserData {
+    - String firstName
+    - String lastName
+    - String address
+    - String phoneNumber
+}
+User "1" -- "1" UserData
 User -- Role
 @enduml
