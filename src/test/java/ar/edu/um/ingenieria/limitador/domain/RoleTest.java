@@ -7,10 +7,11 @@ import org.junit.jupiter.api.Test;
 class RoleTest {
 
     @Test
-    void shouldCreateRoleWithDescription() {
+    void shouldCreateRoleWithDescriptionAndName() {
         var role = new Role();
         role.setDescription("MANAGER");
-
+        role.setRoleName("ROLE_ADMIN");
         assertThat(role.getDescription()).isEqualTo("MANAGER");
+        assertThat(role.getRoleName()).isEqualTo("ROLE_ADMIN");
     }
 }
