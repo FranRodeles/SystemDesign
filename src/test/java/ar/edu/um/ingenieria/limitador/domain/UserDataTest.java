@@ -2,6 +2,8 @@ package ar.edu.um.ingenieria.limitador.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.Set;
+
 import org.junit.jupiter.api.Test;
 
 class UserDataTest {
@@ -15,7 +17,7 @@ class UserDataTest {
         user.setUsername("alice");
         user.setEmail("alice@example.com");
         user.setActivated(false);
-        user.setRole(role);
+        user.setRoles(Set.of(role));
 
         var userData = new UserData();
         userData.setFirstName("Alice");
