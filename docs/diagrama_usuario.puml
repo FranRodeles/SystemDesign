@@ -7,6 +7,8 @@ class User{
 
 class Role{
     - String description
+    - String roleName
+
 }
 
 class UserData {
@@ -15,6 +17,6 @@ class UserData {
     - String address
     - String phoneNumber
 }
-User "1" -- "1" UserData
-User -- Role
+User "1" --* "1" UserData
+User "n" -- "m" Role
 @enduml
